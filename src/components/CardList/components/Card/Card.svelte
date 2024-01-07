@@ -3,8 +3,8 @@
 
   import './styles.less';
 
-  export const loading: boolean = false;
-  export const card: ICoffeeCard | undefined = undefined;
+  export let loading: boolean = false;
+  export let card: ICoffeeCard | undefined = undefined;
 </script>
 
 <article class="card" class:loading>

@@ -44,5 +44,8 @@
 	},
 	"browserslist": [
 		"defaults"
-	]
+	],
+	"dependencies": {
+		"serve": "^14.2.1"
+	}
 }
