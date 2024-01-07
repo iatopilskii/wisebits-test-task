@@ -1,17 +1,21 @@
-import webpack from "webpack"
+import webpack from 'webpack';
 
-import { buildOptimization } from './buildOptimization'
-import { buildPlugins } from "./buildPlugins"
-import { buildLoaders } from "./buildLoaders"
-import { buildResolvers } from "./buildResolvers"
-import { buildDevServer } from './buildDevServer'
+import { buildOptimization } from './buildOptimization';
+import { buildPlugins } from './buildPlugins';
+import { buildLoaders } from './buildLoaders';
+import { buildResolvers } from './buildResolvers';
+import { buildDevServer } from './buildDevServer';
 
-import { IBuildOptions } from "./types/config"
+import { IBuildOptions } from './types/config';
 
-export function buildWebpackConfig({ mode, port, isDev, path: { entry, build, html, src } }: IBuildOptions): webpack.Configuration {
+export function buildWebpackConfig({
+  mode, port, isDev, path: {
+    entry, build, html, src,
+  },
+}: IBuildOptions): webpack.Configuration {
   return {
     mode,
-    entry: entry,
+    entry,
     output: {
       filename: '[name].[contenthash].js',
       chunkFilename: '[name].[chunkhash].js',
@@ -32,7 +36,7 @@ export function buildWebpackConfig({ mode, port, isDev, path: { entry, build, ht
       chunkModules: false,
       modules: false,
       assets: true,
-      entrypoints: false
-    }
-  }
+      entrypoints: false,
+    },
+  };
 }

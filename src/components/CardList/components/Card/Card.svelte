@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { ICoffeeCard } from "api/getCoffeeCard/types";
+  import { ICoffeeCard } from 'api/getCoffeeCard/types';
 
-  import "./styles.less";
+  import './styles.less';
 
-  export let loading: boolean = false;
-  export let card: ICoffeeCard | undefined = undefined;
+  export const loading: boolean = false;
+  export const card: ICoffeeCard | undefined = undefined;
 </script>
 
 <article class="card" class:loading>
@@ -14,11 +14,11 @@
     {/if}
   </div>
   <div class="card__info">
-    <p class="card__origin" class:loading title={card?.origin ?? ""}>
-      {card?.origin ?? ""}
+    <p class="card__origin" class:loading title={card?.origin ?? ''}>
+      {card?.origin ?? ''}
     </p>
-    <h2 class="card__name" class:loading title={card?.blend_name ?? ""}>
-      {card?.blend_name ?? ""}
+    <h2 class="card__name" class:loading title={card?.blend_name ?? ''}>
+      {card?.blend_name ?? ''}
     </h2>
     <div class="card__notes" class:loading>
       <div class="card__notes-wrapper">

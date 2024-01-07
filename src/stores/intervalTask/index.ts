@@ -1,19 +1,19 @@
-import addNewCard from 'helpers/addNewCard'
-import { writable } from 'svelte/store'
+import addNewCard from 'helpers/addNewCard';
+import { writable } from 'svelte/store';
 
-const INTERVAL_TIME = 30 * 1000
+const INTERVAL_TIME = 30 * 1000;
 
-const { subscribe, set, update } = writable<NodeJS.Timeout>()
+const { subscribe, set, update } = writable<NodeJS.Timeout>();
 
 const intervalTaskStore = {
   subscribe,
   setInterval: () => set(setInterval(() => {
-    addNewCard()
+    addNewCard();
   }, INTERVAL_TIME)),
   clearInterval: () => update((interval) => {
-    clearInterval(interval)
-    return undefined
-  })
-}
+    clearInterval(interval);
+    return undefined;
+  }),
+};
 
-export default intervalTaskStore
+export default intervalTaskStore;

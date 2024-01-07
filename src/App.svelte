@@ -1,17 +1,17 @@
 <script lang="ts">
-	import { onMount } from "svelte";
+  import { onMount } from 'svelte';
 
-	import addNewCard from "helpers/addNewCard";
+  import addNewCard from 'helpers/addNewCard';
 
-	import Button from "components/Button/Button.svelte";
-	import CardList from "components/CardList/CardList.svelte";
+  import Button from 'components/Button/Button.svelte';
+  import CardList from 'components/CardList/CardList.svelte';
 
-	onMount(() => {
-		addNewCard();
-	});
+  onMount(() => {
+    addNewCard();
+  });
 </script>
 
 <main class="app">
-	<CardList />
-	<Button />
+  <CardList />
+  <Button />
 </main>

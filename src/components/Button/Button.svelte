@@ -1,8 +1,8 @@
 <script lang="ts">
-  import cardStore from "stores/cards";
-  import addNewCard from "helpers/addNewCard";
+  import cardStore from 'stores/cards';
+  import addNewCard from 'helpers/addNewCard';
 
-  import "./styles.less";
+  import './styles.less';
 
   const handleClick = () => {
     addNewCard();

@@ -1,16 +1,15 @@
 <script lang="ts">
-  import { afterUpdate } from "svelte";
+  import { afterUpdate } from 'svelte';
 
-  import cardStore from "stores/cards";
+  import cardStore from 'stores/cards';
 
-  import Card from "./components/Card/Card.svelte";
+  import Card from './components/Card/Card.svelte';
 
   afterUpdate(() => {
-    const canScroll =
-      window.innerHeight + window.scrollY < document.body.offsetHeight;
+    const canScroll = window.innerHeight + window.scrollY < document.body.offsetHeight;
 
     if (canScroll) {
-      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     }
   });
 </script>

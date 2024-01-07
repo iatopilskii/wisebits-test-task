@@ -1,9 +1,9 @@
-import App from './App.svelte'
+import App from './App.svelte';
 
-import './styles/index.less'
+import './styles/index.less';
 
 const app = new App({
-	target: document.querySelector('#app')
-})
+  target: document.querySelector('#app'),
+});
 
-export default app
+export default app;

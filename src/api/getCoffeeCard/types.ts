@@ -1,4 +1,4 @@
-export type TGetCoffeeCardReturn = Promise<ICoffeeCard>
+export type TGetCoffeeCardReturn = Promise<ICoffeeCard>;
 
 export interface ICoffeeCard {
   id: number
