@@ -1,0 +1,21 @@
+@import 'reset';
+@import 'variables';
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 24px 0;
+  font: var(--font-m);
+
+  @media (min-width: 768px) {
+    max-width: 624px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 948px;
+  }
+}
